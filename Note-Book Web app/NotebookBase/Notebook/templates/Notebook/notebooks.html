@@ -4,4 +4,20 @@
 
 <h3>This is the list of contents</h3>
 
+<div>
+    {% for notebook in notebooks %}
+    <div>
+        <h3>
+            # {{notebook.id}} -- > {{notebook.name}}
+        </h3>
+    </div>
+    {% endfor %}
+</div>
+
+<div>
+    <div>
+        <a href="{% url 'create-room' %}"> Create Room</a>
+    </div>
+</div>
+
 {% endblock %}
